@@ -18,22 +18,22 @@ to see how the data is comprised.
 `data/Beers.csv`
 
 
-| FEATURE | DESCRIPTION          |
-|:------------------------------:|
-|Name     | The name of the beer |
-|BeerID   | The unique id number of the beer|
-|ABV      | Alcohol by volume of the beer   |
-|IBU      | The international bitterness of the units of the beer|
-|Style    | The style of the beer |
-|Ounces   | Unit of measurement for the beer denoted by oz.|
+| FEATURE   | DESCRIPTION            |
+|:---------:|:---------------------:|
+|Name       | The name of the beer |
+|BeerID     | The unique id number of the beer|
+|ABV        | Alcohol by volume of the beer   |
+|IBU        | The international bitterness of the units of the beer|
+|Style      | The style of the beer |
+|Ounces     | Unit of measurement for the beer denoted by oz.|
 
 
 
 `data/Breweries.csv`
 
 
-|FEATURE | DESCRIPTION |
-|:---------------------:|
+|FEATURE   | DESCRIPTION   |
+|:--------:|:-------------:|
 | Brew_ID | The unique identification number of the brewery|
 | Name    | The name of the brewery |
 | City    | The city where the brewery is located|
