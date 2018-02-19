@@ -10,3 +10,54 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Case Study 1
+
+## Questions
+
+### How many breweries are present in each state?
+
+
+
+
+
+###  Merge beer data with the breweries data. Print the first 6 observations and the last six observations to check the merged file.
+
+
+
+
+
+
+
+### Report the number of `NA's` In each column.
+
+
+
+
+
+
+### Compute the median alcohol content and international bitterness unit for each state. Plot a bar chart to compare.
+
+
+
+
+
+
+
+### Which state has the maximum alcoholic (ABV) beer? Which state has the most bitter (IBU) beer?
+
+
+
+
+
+
+
+### Summary statistics for the ABV variable.
+
+
+
+
+
+
+
+
+### Is there an apparent relationship between the bitterness of the beer and its alcoholic content? Draw a scatter plot?
+
