@@ -1,0 +1,12 @@
+---
+title: "Beer & Brewery Report"
+author: "Quentin, Sita, Olha, Tosin"
+date: "2/19/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Case Study 1
