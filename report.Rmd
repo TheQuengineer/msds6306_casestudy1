@@ -59,5 +59,35 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-### Is there an apparent relationship between the bitterness of the beer and its alcoholic content? Draw a scatter plot?
+### Is there an apparent relationship between the bitterness of the beer and its alcoholic content?
 
+In order for us to better examine whether or not there is a relationship betwen the bitterness of the beer and its alcoholic content we will take a look at
+the `ABV` and `IBU` data. The `ABV` data represents our alchol volumn measurement within the beer itself, and the `IBU` represents the international bitterness
+measurement of the beer. Before we can plot these we must create a subset of this data set.
+
+```{r}
+
+#Import the file
+beers <- read.csv('data/Beers.csv')
+
+#create a subset for the variables ABV and IBU as they are our variables fo interest
+bitter_vs_alc <- subset(beers, subset = is.na(IBU) == FALSE, select = c(ABV, IBU))
+
+head(bitter_vs_alc)
+```
+
+
+Now that we have prepared our data we will plot it to better understand the relationship.
+
+```{r}
+library(ggplot2)
+
+ggplot(data=bitter_vs_alc, aes(x=ABV, y=IBU)) +
+  geom_point(pch = 20, color = "brown", size=2) +
+  geom_smooth(method="lm", color="red", linetype=2) +
+  labs(title="Alcoholic Content vs Bitterness",
+       x="Alcohol by Volume", y="International Bitterness Units")
+```
+
+
+Based on our chart above we can conclude that there is a positive relationship between the alchol content and bitterness units based on our line present through the graph. We can also see that as bitterness increases we also expect to see an increase in the alchol levles. This suggests that if a beer has a bitter taste, the alchol content could be high for that specific beer.
