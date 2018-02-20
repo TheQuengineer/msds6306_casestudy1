@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Questions
 
 ### How many breweries are present in each state?
-
+following code generates a data file that represents the total no. of breweries present in each state (US Specifically).
 ```{r}
 #import breweries file
 Breweries <- read.csv("data/Breweries.csv")
@@ -38,10 +38,14 @@ head(breweriesbystate)
 #test <- grep("TX",breweriesOrderedByState$State,value = TRUE)
 #length(test)
 #[1] 28
-write.csv(breweriesbystate,file ="breweriesbystate.csv", row.names = FALSE, quote=FALSE)
+write.csv(breweriesbystate,file ="data/breweriesbystate.csv", row.names = FALSE, quote=FALSE)
+
 ```
+Note that the file generated is located under the "data"" subdirectory
 
 ###  Merge beer data with the breweries data. Print the first 6 observations and the last six observations to check the merged file.
+
+following code generates a merged data file for the breweries and the beers available in them
 
 ```{r}
 #load the beers file
@@ -60,9 +64,11 @@ breweriesandbeers <- merge(Breweries,Beers, by=c("Brewery_id"), all=TRUE)
 str(breweriesandbeers) # 2410 10
 head(breweriesandbeers)
 tail(breweriesandbeers)
-write.csv(breweriesandbeers,file ="breweriesandbeers.csv", row.names = FALSE, quote=FALSE)
+write.csv(breweriesandbeers,file ="data/breweriesandbeers.csv", row.names = FALSE, quote=FALSE)
 
 ```
+Note that the file generated is located under the "data" subdirectory. Based on the first and last six rows of the merged file, this dataset contains the list of the beers available in each of the breweries sorted by state
+
 ### Report the number of `NA's` In each column.
 
 

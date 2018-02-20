@@ -132,6 +132,7 @@ $(document).ready(function () {
 <h2>Questions</h2>
 <div id="how-many-breweries-are-present-in-each-state" class="section level3">
 <h3>How many breweries are present in each state?</h3>
+<p>following code generates a data file that represents the total no. of breweries present in each state (US Specifically).</p>
 <pre class="r"><code>#import breweries file
 Breweries &lt;- read.csv(&quot;data/Breweries.csv&quot;)
 #inspecting the dataset
@@ -180,10 +181,12 @@ str(breweriesbystate)</code></pre>
 #test &lt;- grep(&quot;TX&quot;,breweriesOrderedByState$State,value = TRUE)
 #length(test)
 #[1] 28
-write.csv(breweriesbystate,file =&quot;breweriesbystate.csv&quot;, row.names = FALSE, quote=FALSE)</code></pre>
+write.csv(breweriesbystate,file =&quot;data/breweriesbystate.csv&quot;, row.names = FALSE, quote=FALSE)</code></pre>
+<p>Note that the file generated is located under the “data”&quot; subdirectory</p>
 </div>
 <div id="merge-beer-data-with-the-breweries-data.-print-the-first-6-observations-and-the-last-six-observations-to-check-the-merged-file." class="section level3">
 <h3>Merge beer data with the breweries data. Print the first 6 observations and the last six observations to check the merged file.</h3>
+<p>following code generates a merged data file for the breweries and the beers available in them</p>
 <pre class="r"><code>#load the beers file
 Beers &lt;- read.csv(&quot;data/Beers.csv&quot;)
 # inspect dataset
@@ -257,7 +260,8 @@ str(breweriesandbeers) # 2410 10</code></pre>
 ## 2408     12
 ## 2409     12
 ## 2410     12</code></pre>
-<pre class="r"><code>write.csv(breweriesandbeers,file =&quot;breweriesandbeers.csv&quot;, row.names = FALSE, quote=FALSE)</code></pre>
+<pre class="r"><code>write.csv(breweriesandbeers,file =&quot;data/breweriesandbeers.csv&quot;, row.names = FALSE, quote=FALSE)</code></pre>
+<p>Note that the file generated is located under the “data” subdirectory. Based on the first and last six rows of the merged file, this dataset contains the list of the beers available in each of the breweries sorted by state</p>
 </div>
 <div id="report-the-number-of-nas-in-each-column." class="section level3">
 <h3>Report the number of <code>NA's</code> In each column.</h3>
