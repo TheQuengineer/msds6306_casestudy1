@@ -33,15 +33,15 @@ str(breweriesbystate)
 # assign names to columns
 names(breweriesbystate) <- c("State","Total Breweries")
 str(breweriesbystate)
-head(breweriesbystate)
+#head(breweriesbystate)
 # validating the count for state of Texas
 #test <- grep("TX",breweriesOrderedByState$State,value = TRUE)
 #length(test)
 #[1] 28
-write.csv(breweriesbystate,file ="data/breweriesbystate.csv", row.names = FALSE, quote=FALSE)
-
+#write.csv(breweriesbystate,file ="data/breweriesbystate.csv", row.names = FALSE, quote=FALSE)
+print(breweriesbystate)
 ```
-Note that the file generated is located under the "data"" subdirectory
+Observed that in the breweries dataset, the state of colorado has the highest number of breweries followed by california. Also, the least number of breweries are present in four states, District of Columbia, North Dakota, South Dakota and West Virginia
 
 ###  Merge beer data with the breweries data. Print the first 6 observations and the last six observations to check the merged file.
 
