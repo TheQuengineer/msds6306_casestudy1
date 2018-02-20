@@ -15,18 +15,54 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### How many breweries are present in each state?
 
-
-
-
+```{r}
+#import breweries file
+Breweries <- read.csv("data/Breweries.csv")
+#inspecting the dataset
+str(Breweries)
+#head(Breweries)
+#tail(Breweries)
+#sort the data by state
+library(dplyr)
+breweriesOrderedByState <- arrange(Breweries, desc(Breweries$State))
+# use table function to get a count of breweries
+breweriesbystate <- table(Breweries$State)
+# change table to dataframe
+breweriesbystate <- as.data.frame(breweriesbystate)
+str(breweriesbystate)
+# assign names to columns
+names(breweriesbystate) <- c("State","Total Breweries")
+str(breweriesbystate)
+head(breweriesbystate)
+# validating the count for state of Texas
+#test <- grep("TX",breweriesOrderedByState$State,value = TRUE)
+#length(test)
+#[1] 28
+write.csv(breweriesbystate,file ="breweriesbystate.csv", row.names = FALSE, quote=FALSE)
+```
 
 ###  Merge beer data with the breweries data. Print the first 6 observations and the last six observations to check the merged file.
 
+```{r}
+#load the beers file
+Beers <- read.csv("data/Beers.csv")
+# inspect dataset
+str(Beers)
+#head(Beers)
+#tail(Beers)
+names(Breweries) # dim 558 4
+names(Beers) # dim 2410 7
+#rename columns
+names(Breweries) <- c("Brewery_id","Brewery_Name", "City", "State" )
+names(Beers) <- c("Beer_Name","Beer_ID","ABV","IBU","Brewery_id","Style","Ounces") 
+#common variable data is Brewery_id
+breweriesandbeers <- merge(Breweries,Beers, by=c("Brewery_id"), all=TRUE)
+str(breweriesandbeers) # 2410 10
+head(breweriesandbeers)
+tail(breweriesandbeers)
+write.csv(breweriesandbeers,file ="breweriesandbeers.csv", row.names = FALSE, quote=FALSE)
 
-
-
-
-
-
+```
 ### Report the number of `NA's` In each column.
 
 
