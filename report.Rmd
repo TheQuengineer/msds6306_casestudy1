@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Case Study 1
+# Case Study 1
 
 ## Questions
 
@@ -71,9 +71,12 @@ Note that the file generated is located under the "data" subdirectory. Based on 
 
 ### Report the number of `NA's` In each column.
 
-
-
-
+```{r}
+#variable NA_count will represent the number of NA's in each column
+NA_count <- colSums(is.na(breweriesandbeers))
+NA_count
+```
+The number of NA's in the column ABV: 62, IBU: 1005, the rest columns: 0.
 
 
 ### Compute the median alcohol content and international bitterness unit for each state. Plot a bar chart to compare.
@@ -86,10 +89,20 @@ Note that the file generated is located under the "data" subdirectory. Based on 
 
 ### Which state has the maximum alcoholic (ABV) beer? Which state has the most bitter (IBU) beer?
 
-
-
-
-
+```{r}
+#Lets move NAs from the ABV column and then check max ABV using function order (we want to see the whole line which contains this element)
+#Variable ABV_NOna will represent data set without NAs elements in the column ABV and ABV_NOna_ordered will represent ordered data set by column ABV without NAs elements. 
+ABV_NOna <- subset(x=breweriesandbeers, !is.na(breweriesandbeers$ABV))
+ABV_NOna_ordered <- ABV_NOna[order(ABV_NOna$ABV),]
+tail(ABV_NOna_ordered,1)
+#Lets move NAs from the IBU column and then check max IBU using function order (we want to see the whole line which contains this element)
+#Variable IBU_NOna will represent data set without NAs elements in the column IBU
+IBU_NOna <- subset(x=breweriesandbeers, !is.na(breweriesandbeers$IBU))
+IBU_NOna_ordered <- IBU_NOna[order(IBU_NOna$IBU),]
+tail(IBU_NOna_ordered,1)
+#In this way we gave the answer on the question 5 and still keeping all NAs in final dataset "breweriesandbeers" in case we will need them.
+```
+State Colorado (CO) has the maximum alcoholic (ABV) beer. State Oregon (OR) has the most bitter (IBU) beer.
 
 
 ### Summary statistics for the ABV variable.
