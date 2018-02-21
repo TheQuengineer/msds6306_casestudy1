@@ -14,14 +14,14 @@ knitr::opts_chunk$set(echo = TRUE)
 *Two important measurements of beer that you should know are ABV and IBU. Figuring out what they mean and how they relate to beer can help you to better understand our analysis below and your own preference for beer and the beers behind the bar.*
 ![](/What-Do-ABV-and-IBU-Mean-.jpg)
 
-###What Does ABV Mean?
+### What Does ABV Mean?
 ABV stands for Alcohol By Volume and is usually listed as a percentage. By law in the United States, the ABV must be listed on each beer to give customers an idea about how much alcohol is in each brew. 
 
 This percentage lets you know how much of your beer is alcohol and how much is other stuff, like water. Simply put, the higher the ABV, the more drunk you’ll get. Beer can be anywhere between 2% to 12% ABV, though you’ll generally find it in the 4% to 6% range. 
 
 So how does a beer become alcoholic? During the brewing process, yeast transforms sugar into alcohol. Brewers take samples of the beer while its undergoing this process, and make changes to the batch in order to make it as strong as they’d like.
 
-###What Does IBU Mean?
+### What Does IBU Mean?
 Like ABV, IBU (International Bitterness Units) is another common measurement for beer. Rather than telling us how much alcohol there is, IBU measures the bitterness from hops in a beer on a scale of 0 to 100. In more technical terms, IBU gauges the isomerized alpha acids from hops in a beer in parts per million. Very hoppy beers, like imperial IPAs, can reach 80 BU. 
 
 Though IBUs can help you better understand what type of beer you like in terms of bitterness, it’s important to note that the bitterness of beer is also affected by malts. Beer with a high IBU, like stouts, might not taste very bitter at all because of their sweet malts. Instead of relying on IBU to perceive the bitterness of a beer, use it to gauge your preferences. Try to look at the IBU of your favorite beers to understand what range is your favorite.
