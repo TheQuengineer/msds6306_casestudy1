@@ -121,7 +121,7 @@ tail(IBU_NOna_ordered,1)
 ```
 Based on data we have State Colorado (CO) has the maximum alcoholic (Lee Hill Series Vol. 5 - Belgian Style Quadrupel Ale: ABV = 0.128) beer. State Oregon (OR) has the most bitter (IBU = 138) beer.
 
-[![](/Picture1.jpg)](https://www.upslopebrewing.com/lee-hill-series-vol-5-belgian-style-quadrupel-ale/)[![](/Picture2.jpg)](http://beerguypdx.blogspot.com/2013/05/astoria-brewing-company-bitter-bitch.html)
+[![](/picture1.jpg)](https://www.upslopebrewing.com/lee-hill-series-vol-5-belgian-style-quadrupel-ale/)[![](/picture2.jpg)](http://beerguypdx.blogspot.com/2013/05/astoria-brewing-company-bitter-bitch.html)
 
 [*Interesting: Samuel Adams claims the title of brewing the strongest naturally-fermented beer in the world. In 2012, Utopia was released at 29% ABV (58 proof), though some of its barrels clocked in at 33% ABV. Yes, you read that right.Location: Massachusetts, United States*](http://berghoffbeer.com/blog/5-strongest-naturally-fermented-beers-world/)
 
