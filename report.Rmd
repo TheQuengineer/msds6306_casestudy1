@@ -9,9 +9,26 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Case Study 1
+*Though enjoying a quality craft beer is simple enough to do, brewing it to perfection is quite another story. It can take years of effort and lots of batches of beer to create a delicious brew. The more you understand about the beer you’re drinking, the more you can fully appreciate it in all of its glory.*
 
-## Questions
+*Two important measurements of beer that you should know are ABV and IBU. Figuring out what they mean and how they relate to beer can help you to better understand our analysis below and your own preference for beer and the beers behind the bar.*
+![](/What-Do-ABV-and-IBU-Mean-.jpg)
+
+###What Does ABV Mean?
+ABV stands for Alcohol By Volume and is usually listed as a percentage. By law in the United States, the ABV must be listed on each beer to give customers an idea about how much alcohol is in each brew. 
+
+This percentage lets you know how much of your beer is alcohol and how much is other stuff, like water. Simply put, the higher the ABV, the more drunk you’ll get. Beer can be anywhere between 2% to 12% ABV, though you’ll generally find it in the 4% to 6% range. 
+
+So how does a beer become alcoholic? During the brewing process, yeast transforms sugar into alcohol. Brewers take samples of the beer while its undergoing this process, and make changes to the batch in order to make it as strong as they’d like.
+
+###What Does IBU Mean?
+Like ABV, IBU (International Bitterness Units) is another common measurement for beer. Rather than telling us how much alcohol there is, IBU measures the bitterness from hops in a beer on a scale of 0 to 100. In more technical terms, IBU gauges the isomerized alpha acids from hops in a beer in parts per million. Very hoppy beers, like imperial IPAs, can reach 80 BU. 
+
+Though IBUs can help you better understand what type of beer you like in terms of bitterness, it’s important to note that the bitterness of beer is also affected by malts. Beer with a high IBU, like stouts, might not taste very bitter at all because of their sweet malts. Instead of relying on IBU to perceive the bitterness of a beer, use it to gauge your preferences. Try to look at the IBU of your favorite beers to understand what range is your favorite.
+
+***http://berghoffbeer.com
+
+# Case Study 1
 
 ### How many breweries are present in each state?
 following code generates a data file that represents the total no. of breweries present in each state (US Specifically).
@@ -102,8 +119,11 @@ IBU_NOna_ordered <- IBU_NOna[order(IBU_NOna$IBU),]
 tail(IBU_NOna_ordered,1)
 #In this way we gave the answer on the question 5 and still keeping all NAs in final dataset "breweriesandbeers" in case we will need them.
 ```
-State Colorado (CO) has the maximum alcoholic (ABV) beer. State Oregon (OR) has the most bitter (IBU) beer.
+Based on data we have State Colorado (CO) has the maximum alcoholic (Lee Hill Series Vol. 5 - Belgian Style Quadrupel Ale: ABV = 0.128) beer. State Oregon (OR) has the most bitter (IBU = 138) beer.
 
+[![](/Picture1.jpg)](https://www.upslopebrewing.com/lee-hill-series-vol-5-belgian-style-quadrupel-ale/)[![](/Picture2.jpg)](http://beerguypdx.blogspot.com/2013/05/astoria-brewing-company-bitter-bitch.html)
+
+[*Interesting: Samuel Adams claims the title of brewing the strongest naturally-fermented beer in the world. In 2012, Utopia was released at 29% ABV (58 proof), though some of its barrels clocked in at 33% ABV. Yes, you read that right.Location: Massachusetts, United States*](http://berghoffbeer.com/blog/5-strongest-naturally-fermented-beers-world/)
 
 ### Summary statistics for the ABV variable.
 
