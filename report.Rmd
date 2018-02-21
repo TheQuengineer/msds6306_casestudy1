@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Case Study 1
+# Case Study 1
 
 ## Questions
 
@@ -71,9 +71,12 @@ Note that the file generated is located under the "data" subdirectory. Based on 
 
 ### Report the number of `NA's` In each column.
 
-
-
-
+```{r}
+#variable NA_count will represent the number of NA's in each column
+NA_count <- colSums(is.na(breweriesandbeers))
+NA_count
+```
+The number of NA's in the column ABV: 62, IBU: 1005, the rest columns: 0.
 
 
 ### Compute the median alcohol content and international bitterness unit for each state. Plot a bar chart to compare.
@@ -86,10 +89,20 @@ Note that the file generated is located under the "data" subdirectory. Based on 
 
 ### Which state has the maximum alcoholic (ABV) beer? Which state has the most bitter (IBU) beer?
 
-
-
-
-
+```{r}
+#Lets move NAs from the ABV column and then check max ABV using function order (we want to see the whole line which contains this element)
+#Variable ABV_NOna will represent data set without NAs elements in the column ABV and ABV_NOna_ordered will represent ordered data set by column ABV without NAs elements. 
+ABV_NOna <- subset(x=breweriesandbeers, !is.na(breweriesandbeers$ABV))
+ABV_NOna_ordered <- ABV_NOna[order(ABV_NOna$ABV),]
+tail(ABV_NOna_ordered,1)
+#Lets move NAs from the IBU column and then check max IBU using function order (we want to see the whole line which contains this element)
+#Variable IBU_NOna will represent data set without NAs elements in the column IBU
+IBU_NOna <- subset(x=breweriesandbeers, !is.na(breweriesandbeers$IBU))
+IBU_NOna_ordered <- IBU_NOna[order(IBU_NOna$IBU),]
+tail(IBU_NOna_ordered,1)
+#In this way we gave the answer on the question 5 and still keeping all NAs in final dataset "breweriesandbeers" in case we will need them.
+```
+State Colorado (CO) has the maximum alcoholic (ABV) beer. State Oregon (OR) has the most bitter (IBU) beer.
 
 
 ### Summary statistics for the ABV variable.
@@ -104,7 +117,7 @@ Note that the file generated is located under the "data" subdirectory. Based on 
 ### Is there an apparent relationship between the bitterness of the beer and its alcoholic content?
 
 In order for us to better examine whether or not there is a relationship betwen the bitterness of the beer and its alcoholic content we will take a look at
-the `ABV` and `IBU` data. The `ABV` data represents our alchol volumn measurement within the beer itself, and the `IBU` represents the international bitterness
+the `ABV` and `IBU` data. The `ABV` data represents our alchol volume measurement within the beer itself, and the `IBU` represents the international bitterness
 measurement of the beer. Before we can plot these we must create a subset of this data set.
 
 ```{r}
@@ -132,4 +145,4 @@ ggplot(data=bitter_vs_alc, aes(x=ABV, y=IBU)) +
 ```
 
 
-Based on our chart above we can conclude that there is a positive relationship between the alchol content and bitterness units based on our line present through the graph. We can also see that as bitterness increases we also expect to see an increase in the alchol levles. This suggests that if a beer has a bitter taste, the alchol content could be high for that specific beer.
+Based on our chart above we can conclude that there is a positive relationship between the alchol content and bitterness units based on our line present through the graph. We can also see that as bitterness increases we also expect to see an increase in the alchol levels. This suggests that if a beer has a bitter taste, the alchol content could be high for that specific beer.
