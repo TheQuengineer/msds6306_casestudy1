@@ -164,5 +164,10 @@ ggplot(data=bitter_vs_alc, aes(x=ABV, y=IBU)) +
        x="Alcohol by Volume", y="International Bitterness Units")
 ```
 
-
 Based on our chart above we can conclude that there is a positive relationship between the alchol content and bitterness units based on our line present through the graph. We can also see that as bitterness increases we also expect to see an increase in the alchol levels. This suggests that if a beer has a bitter taste, the alchol content could be high for that specific beer.
+
+Lets check correlation value using next code:
+```{r}
+cor.test(breweriesandbeers$ABV,breweriesandbeers$IBU)
+```
+p-value < 2.2e-16 means we should reject the null hypothesis that true correlation is equal to 0. We can conclude that ABV and IBU are significantly correlated with a correlation coefficient of 0.67 and p-value of 2.2*10^{-16}.
