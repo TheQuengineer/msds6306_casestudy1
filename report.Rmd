@@ -95,15 +95,6 @@ NA_count
 ```
 The number of NA's in the column ABV: 62, IBU: 1005, the rest columns: 0.
 
-
-### Compute the median alcohol content and international bitterness unit for each state. Plot a bar chart to compare.
-
-
-
-
-
-
-
 ### Which state has the maximum alcoholic (ABV) beer? Which state has the most bitter (IBU) beer?
 
 ```{r}
@@ -125,14 +116,25 @@ Based on data we have State Colorado (CO) has the maximum alcoholic (Lee Hill Se
 
 [*Interesting: Samuel Adams claims the title of brewing the strongest naturally-fermented beer in the world. In 2012, Utopia was released at 29% ABV (58 proof), though some of its barrels clocked in at 33% ABV. Yes, you read that right.Location: Massachusetts, United States*](http://berghoffbeer.com/blog/5-strongest-naturally-fermented-beers-world/)
 
+### Compute the median alcohol content and international bitterness unit for each state. Plot a bar chart to compare.
+
+```{r}
+med.abv <- tapply(ABV_NOna$ABV, ABV_NOna$State, median)
+med.abv
+med.ibu <- tapply(IBU_NOna$IBU, IBU_NOna$State, median)
+med.ibu
+barplot(med.abv)
+barplot(med.ibu)
+```
+
+
 ### Summary statistics for the ABV variable.
 
 Here we examine a summary  of the ABV data in our `Beers.csv` dataset.
 ```{r}
-
-summary(ABV_NOna)
+summary(breweriesandbeers$ABV)
 ```
-
+Min. ABV is 0.001, Mean value is 0.05977 and Max. ABV is 0.128.
 
 ### Is there an apparent relationship between the bitterness of the beer and its alcoholic content?
 
