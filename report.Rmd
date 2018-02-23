@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 *Though enjoying a quality craft beer is simple enough to do, brewing it to perfection is quite another story. It can take years of effort and lots of batches of beer to create a delicious brew. The more you understand about the beer you’re drinking, the more you can fully appreciate it in all of its glory.*
 
 *Two important measurements of beer that you should know are ABV and IBU. Figuring out what they mean and how they relate to beer can help you to better understand our analysis below and your own preference for beer and the beers behind the bar.*
-![](/What-Do-ABV-and-IBU-Mean-.jpg)
+![](images/What-Do-ABV-and-IBU-Mean-.jpg)
 
 ### What Does ABV Mean?
 ABV stands for Alcohol By Volume and is usually listed as a percentage. By law in the United States, the ABV must be listed on each beer to give customers an idea about how much alcohol is in each brew. 
@@ -121,17 +121,17 @@ tail(IBU_NOna_ordered,1)
 ```
 Based on data we have State Colorado (CO) has the maximum alcoholic (Lee Hill Series Vol. 5 - Belgian Style Quadrupel Ale: ABV = 0.128) beer. State Oregon (OR) has the most bitter (Bitter Bitch Imperial IPA: IBU = 138) beer.
 
-[![](/picture1.jpg)](https://www.upslopebrewing.com/lee-hill-series-vol-5-belgian-style-quadrupel-ale/)[![](/picture2.jpg)](http://beerguypdx.blogspot.com/2013/05/astoria-brewing-company-bitter-bitch.html)
+[![](images/picture1.jpg)](https://www.upslopebrewing.com/lee-hill-series-vol-5-belgian-style-quadrupel-ale/)[![](images/picture2.jpg)](http://beerguypdx.blogspot.com/2013/05/astoria-brewing-company-bitter-bitch.html)
 
 [*Interesting: Samuel Adams claims the title of brewing the strongest naturally-fermented beer in the world. In 2012, Utopia was released at 29% ABV (58 proof), though some of its barrels clocked in at 33% ABV. Yes, you read that right.Location: Massachusetts, United States*](http://berghoffbeer.com/blog/5-strongest-naturally-fermented-beers-world/)
 
 ### Summary statistics for the ABV variable.
 
+Here we examine a summary  of the ABV data in our `Beers.csv` dataset.
+```{r}
 
-
-
-
-
+summary(ABV_NOna)
+```
 
 
 ### Is there an apparent relationship between the bitterness of the beer and its alcoholic content?
