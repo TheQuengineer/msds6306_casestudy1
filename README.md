@@ -55,6 +55,12 @@ the purpose of the study. This folder contains two files.
   that is measured during the study.
   + `Breweries.csv` contains information about 558 breweries  within the United States.
 
+- `images/` This folder contains all of the images that are used in the case study.
+
+  + `picture1.jpg` Graphic of Beer & ABV topic
+  + `picture2.jpg` Belgian Beer graphic
+  + `What-Do-ABV-and-IBU-Mean-.jpg` Main graphic for the case study topic.
+
 - `report.html` The html page of the entire report of the study of both the beers and
 the different breweries
 - `report.Rmd` Is the Rmarkdown version of the entire report. Contains all the code as well as
@@ -114,4 +120,4 @@ loaded via a namespace (and not attached):
  [7] R6_2.2.2         rlang_0.1.6      plyr_1.8.4       stringr_1.2.0    tools_3.4.3      grid_3.4.3      
 [13] gtable_0.2.0     htmltools_0.3.6  lazyeval_0.2.1   yaml_2.1.16      assertthat_0.2.0 digest_0.6.13   
 [19] rprojroot_1.3-2  tibble_1.4.1     glue_1.2.0       evaluate_0.10.1  rmarkdown_1.8    labeling_0.3    
-[25] stringi_1.1.6    compiler_3.4.3   pillar_1.0.1     scales_0.5.0     backports_1.1.2  pkgconfig_2.0.1 
+[25] stringi_1.1.6    compiler_3.4.3   pillar_1.0.1     scales_0.5.0     backports_1.1.2  pkgconfig_2.0.1
