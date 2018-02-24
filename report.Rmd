@@ -108,14 +108,30 @@ Based on data we have State Colorado (CO) has the maximum alcoholic (Lee Hill Se
 ### Compute the median alcohol content and international bitterness unit for each state. Plot a bar chart to compare.
 
 ```{r}
+library(ggplot2)
 med.abv <- tapply(ABV_NOna$ABV, ABV_NOna$State, median)
 med.abv
 med.ibu <- tapply(IBU_NOna$IBU, IBU_NOna$State, median)
-med.ibu
-barplot(med.abv)
-barplot(med.ibu)
+
+median_abv <- as.data.frame.table(med.abv)
+median_ibu <- as.data.frame.table(med.ibu)
+colnames(median_abv)[1] <- "States"
+colnames(median_ibu)[1] <- "States"
+
+library(ggplot2)
+data <- merge(median_abv, median_ibu, by="States", all = TRUE)
+colnames(data)[3] <- "IBU"
+colnames(data)[2] <- "ABV"
+
+mytheme <- theme(plot.title = element_text(face = "bold.italic",
+                 size= 14, color = "black"), axis.text.x = element_text(size = 5, face ="bold.italic"), axis.text.y = element_text(face = "bold.italic"))
+ggplot(data = data, aes(x = States, y = IBU, fill = ABV)) +
+    geom_bar(stat = "identity") +
+    labs(title = "Comparison of IBU & ABV by State") +
+     mytheme
 ```
 
+Above we can see our comparison chart. If we break down our `IBU` by state we can see the level of `ABV` for the corresponding `IBU`. It is interesting to note here that UTAH has the ABV levels of all the state which is a very interesting finding. The state with the Highest `ABV` and `IBU` looks to be West Virginia! 
 
 ### Summary statistics for the ABV variable.
 
@@ -157,4 +173,8 @@ Lets check correlation value using next code:
 ```{r}
 cor.test(breweriesandbeers$ABV,breweriesandbeers$IBU)
 ```
-p-value < 2.2e-16 means we should reject the null hypothesis that true correlation is equal to 0. We can conclude that alcoholic content (ABV) and bitterness (IBU) are significantly correlated with a correlation coefficient of 0.67 and p-value of 2.2*10^{-16}.
+`p-value < 2.2e-16` means we should reject the null hypothesis that true correlation is equal to 0. We can conclude that alcoholic content (ABV) and bitterness (IBU) are significantly correlated with a correlation coefficient of `0.67` and p-value of `2.2*10^{-16}`.
+
+### Conclusion
+
+Beers & Breweries are a big part of American culture as we have seen from the data. We've seen all of the states that contain multiple breweries and we broke them down by their ABV and their IBU. We also examined the median alcohol volume and its corresponding median bitterness measurement by state. We saw that Colorado had the most breweries of all the States followed by California. Finally, we examined whether or not IBU and ABV were correlated. Based on this casestudy we can conclude that the ideal place for having a brewery has been Colorado, and for new Beer drinkers it is probably ideal for them to start with a beer that has a lower IBU as it will usually result in that beer having a lower alcohol volume.
