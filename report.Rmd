@@ -108,6 +108,7 @@ Based on data we have State Colorado (CO) has the maximum alcoholic (Lee Hill Se
 ### Compute the median alcohol content and international bitterness unit for each state. Plot a bar chart to compare.
 
 ```{r}
+library(ggplot2)
 bitterness <- aggregate(breweriesandbeers$IBU, by=data.frame(breweriesandbeers$State), median, na.rm=TRUE)
 bitterness
 alcohol <- aggregate(breweriesandbeers$ABV, by=data.frame(breweriesandbeers$State), median, na.rm=TRUE)
