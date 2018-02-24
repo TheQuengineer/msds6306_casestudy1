@@ -68,6 +68,8 @@ a complete insights found during the research in an effort to answer the questio
 
 - `README.md` The codebook summarizing the purpose of the entire project and how it is organized.
 
+- `Makefile.R` The file containing all the setup instructions for the entire case study
+
 ### The Questions We're Interested in Answering
 
 1.) How many breweries are currently present in each state? (US Specifically)

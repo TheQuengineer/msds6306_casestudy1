@@ -119,7 +119,6 @@ median_ibu <- as.data.frame.table(med.ibu)
 colnames(median_abv)[1] <- "States"
 colnames(median_ibu)[1] <- "States"
 
-library(ggplot2)
 data <- merge(median_abv, median_ibu, by="States", all = TRUE)
 colnames(data)[3] <- "IBU"
 colnames(data)[2] <- "ABV"
