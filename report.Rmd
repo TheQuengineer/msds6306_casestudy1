@@ -112,6 +112,7 @@ library(ggplot2)
 med.abv <- tapply(ABV_NOna$ABV, ABV_NOna$State, median)
 med.abv
 med.ibu <- tapply(IBU_NOna$IBU, IBU_NOna$State, median)
+med.ibu
 
 median_abv <- as.data.frame.table(med.abv)
 median_ibu <- as.data.frame.table(med.ibu)
