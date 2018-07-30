@@ -94,7 +94,7 @@ content?
 
 | Researcher | Questions of Interest |
 |:-----------:|:---------------------:|
-|Sita Daggubati | Q1 & Q2    |
+|Sita D | Q1 & Q2    |
 |Olha Tanyuk  | Q3 & Q4 / File Organization, Introduction |
 |Tosin Akinpelu| Q5 & Q6 |
 | Quentin Thomas | Q7 & Codebook, Conclusion |
