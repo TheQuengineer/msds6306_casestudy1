@@ -2,7 +2,7 @@
 
 ## Group Members
 - Olha Tanyuk
-- Sita Daggubati
+- Sita D
 - Quentin Thomas
 - Tosin Akinpelu
 
